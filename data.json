@@ -1,0 +1,119 @@
+{
+    "categories": {
+      "animals": [
+        {
+          "question": "What is the largest mammal?",
+          "puzzleWord": "ALWHOE",
+          "rightAnswers": [
+            { "answer": "whale", "score": 10 },
+            { "answer": "blue whale", "score": 20 },
+            { "answer": "ocean giant", "score": 15 }
+          ]
+        },
+        {
+          "question": "Which animal can fly?",
+          "puzzleWord": "EAGBDRI",
+          "rightAnswers": [
+            { "answer": "bird", "score": 10 },
+            { "answer": "eagle", "score": 15 },
+            { "answer": "parrot", "score": 12 }
+          ]
+        },
+        {
+          "question": "What is the king of the jungle?",
+          "puzzleWord": "ILONA",
+          "rightAnswers": [
+            { "answer": "lion", "score": 10 },
+            { "answer": "jungle king", "score": 15 },
+            { "answer": "roaring cat", "score": 12 }
+          ]
+        },
+        {
+          "question": "Which animal has a hump on its back?",
+          "puzzleWord": "AMECL",
+          "rightAnswers": [
+            { "answer": "camel", "score": 10 },
+            { "answer": "desert traveler", "score": 15 },
+            { "answer": "humpback", "score": 12 }
+          ]
+        }
+      ],
+      "countries": [
+        {
+          "question": "What is the largest country by land area?",
+          "puzzleWord": "SUIRACN",
+          "rightAnswers": [
+            { "answer": "Russia", "score": 10 },
+            { "answer": "China", "score": 15 },
+            { "answer": "USA", "score": 12 }
+          ]
+        },
+        {
+          "question": "Which country is known for the pyramids?",
+          "puzzleWord": "EGYPT",
+          "rightAnswers": [
+            { "answer": "Egypt", "score": 10 },
+            { "answer": "land of pharaohs", "score": 15 },
+            { "answer": "pyramid nation", "score": 12 }
+          ]
+        },
+        {
+          "question": "Which country is famous for tulips and windmills?",
+          "puzzleWord": "NETHERLANDS",
+          "rightAnswers": [
+            { "answer": "Netherlands", "score": 10 },
+            { "answer": "Dutch land", "score": 15 },
+            { "answer": "tulip country", "score": 12 }
+          ]
+        },
+        {
+          "question": "Which country is home to kangaroos and koalas?",
+          "puzzleWord": "AUSTRALIA",
+          "rightAnswers": [
+            { "answer": "Australia", "score": 10 },
+            { "answer": "down under", "score": 15 },
+            { "answer": "kangaroo land", "score": 12 }
+          ]
+        }
+      ],
+      "fruits": [
+        {
+          "question": "Which fruit is known as the 'king of fruits'?",
+          "puzzleWord": "DURIANMANGOAPPLE",
+          "rightAnswers": [
+            { "answer": "Durian", "score": 10 },
+            { "answer": "Mango", "score": 15 },
+            { "answer": "Apple", "score": 12 }
+          ]
+        },
+        {
+          "question": "Which fruit is red and heart-shaped?",
+          "puzzleWord": "STRAWBERRY",
+          "rightAnswers": [
+            { "answer": "Strawberry", "score": 10 },
+            { "answer": "red berry", "score": 15 },
+            { "answer": "heart fruit", "score": 12 }
+          ]
+        },
+        {
+          "question": "Which fruit is yellow and known for its curved shape?",
+          "puzzleWord": "BANANA",
+          "rightAnswers": [
+            { "answer": "Banana", "score": 10 },
+            { "answer": "yellow fruit", "score": 15 },
+            { "answer": "curved delight", "score": 12 }
+          ]
+        },
+        {
+          "question": "Which fruit has a tough outer shell and is often associated with tropical regions?",
+          "puzzleWord": "COCONUT",
+          "rightAnswers": [
+            { "answer": "Coconut", "score": 10 },
+            { "answer": "tropical nut", "score": 15 },
+            { "answer": "hard shell fruit", "score": 12 }
+          ]
+        }
+      ]
+    }
+  }
+  
