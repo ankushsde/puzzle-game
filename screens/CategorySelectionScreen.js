@@ -1,21 +1,38 @@
 import React, { useState,useEffect } from 'react';
 import { View, Text, TouchableOpacity, StyleSheet } from 'react-native';
 import jsonData from "../data.json"
+import { useDispatch, useSelector } from 'react-redux';
+import { selectCategory,setCategory } from '../store/slices/CategorySlice';
+import { selectAvailableCategory,selectSelectedCategory } from '../store/slices/CategorySlice';
+
 
 const CategorySelectionScreen = ({ navigation }) => {
 
-  const [jsonData,setJsonData]=useState([]);
+  const dispatch = useDispatch();
+   const categoriesObject = useSelector(selectAvailableCategory) || {};
+   const availableCategories = Object.entries(categoriesObject);
+
+
+  console.log('availableCategories:', availableCategories);
+  
+  const selectedCategory = useSelector(selectSelectedCategory);
+
+
 
  
   const fetchData = async () => {
     try {
       // Assuming data.json is in the public folder
-      const response = await fetch('../data.json');
+      const response = await fetch('https://dev-fiatuaf94sbuhrn.api.raw-labs.com/your/endpoint/3');
       if (!response.ok) {
-        throw new Error('Network response was not ok');
+        throw new Error('Network response was not okk');
       }
       const data = await response.json();
-      setJsonData(data);
+      // console.log('check data ',data)
+       const categories = data.categories;
+
+       dispatch(setCategory(categories))
+
     } catch (error) {
       console.error('Error fetching JSON data:', error);
     }
@@ -25,6 +42,7 @@ const CategorySelectionScreen = ({ navigation }) => {
     fetchData();
   }, []);
 
+ 
   const startGame = (category) => {
     // Navigate to the game screen with the selected category
     navigation.navigate('GameScreen', { category });
@@ -33,22 +51,21 @@ const CategorySelectionScreen = ({ navigation }) => {
     // Navigate to the leaderboard screen
     navigation.navigate('LeaderboardScreen');
   };
-
-  
-
  
+
   return (
     <View style={styles.container}>
           <Text style={styles.title}>Welcome to Puzzle Game</Text>
-      <TouchableOpacity style={styles.categoryButton} onPress={() => startGame('animals')}>
-        <Text style={styles.buttonText}>Animals</Text>
+      
+      {availableCategories.map(([categoryName, category], index) => (
+      <TouchableOpacity
+        key={index}
+        onPress={() => dispatch(selectCategory(category))}
+        style={styles.categoryButton}
+      >
+        <Text style={styles.buttonText}>{categoryName}</Text>
       </TouchableOpacity>
-      <TouchableOpacity style={styles.categoryButton} onPress={() => startGame('countries')}>
-        <Text style={styles.buttonText}>Countries</Text>
-      </TouchableOpacity>
-      <TouchableOpacity style={styles.categoryButton} onPress={() => startGame('fruits')}>
-        <Text style={styles.buttonText}>Fruits</Text>
-      </TouchableOpacity>
+    ))}
       <TouchableOpacity style={styles.startButton} onPress={() => startGame('')}>
         <Text style={styles.buttonText}>Start</Text>
       </TouchableOpacity>
@@ -72,7 +89,7 @@ const styles = StyleSheet.create({
   },
   categoryButton: {
     backgroundColor: '#3498db',
-    padding: 10,
+     padding: 10,
     marginVertical: 5,
     width: 200,
     alignItems: 'center',
