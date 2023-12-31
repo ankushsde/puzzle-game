@@ -22,8 +22,7 @@ const CategorySelectionScreen = ({ navigation }) => {
  
   const fetchData = async () => {
     try {
-      // Assuming data.json is in the public folder
-      const response = await fetch('https://dev-fiatuaf94sbuhrn.api.raw-labs.com/your/endpoint/3');
+       const response = await fetch('https://dev-fiatuaf94sbuhrn.api.raw-labs.com/your/endpoint/3');
       if (!response.ok) {
         throw new Error('Network response was not okk');
       }
@@ -60,7 +59,7 @@ const CategorySelectionScreen = ({ navigation }) => {
       {availableCategories.map(([categoryName, category], index) => (
       <TouchableOpacity
         key={index}
-        onPress={() => dispatch(selectCategory(category))}
+        onPress={() => dispatch(selectCategory(categoryName))}
         style={styles.categoryButton}
       >
         <Text style={styles.buttonText}>{categoryName}</Text>
