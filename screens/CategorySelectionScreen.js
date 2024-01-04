@@ -17,9 +17,6 @@ const CategorySelectionScreen = ({ navigation }) => {
   
   const selectedCategory = useSelector(selectSelectedCategory);
 
-
-
- 
   const fetchData = async () => {
     try {
        const response = await fetch('https://dev-fiatuaf94sbuhrn.api.raw-labs.com/your/endpoint/3');
