@@ -6,6 +6,8 @@ import GameScreen from '../screens/GameScreen';
 import LeaderboardScreen from '../screens/LeaderboardScreen';
 import LogInScreen from '../screens/LogInScreen';
 import HomeScreen from '../screens/HomeScreen';
+import Counter from '../screens/Counter';
+import LocalStorage from '../screens/LocalStorage';
 
 
 const Stack = createStackNavigator();
@@ -14,6 +16,7 @@ const Navigation = () => {
   return (
   <NavigationContainer>
     <Stack.Navigator >
+    <Stack.Screen name='LocalStorage' component ={LocalStorage}/>
         <Stack.Screen name='LogInScreen' component ={LogInScreen}/>
         <Stack.Screen name='HomeScreen' component={HomeScreen}/>
         <Stack.Screen name='CategoryScreen' component ={CategorySelectionScreen}/>
