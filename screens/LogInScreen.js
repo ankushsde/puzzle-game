@@ -2,6 +2,7 @@ import { View, Text, SafeAreaView, TouchableOpacity , StyleSheet, KeyboardAvoidi
 import React from 'react'
 import { TextInput } from 'react-native-gesture-handler'
 import EffectHook from '../hooks/effectHook'
+import Counter from './Counter'
 
 const LogInScreen = ({ navigation }) => {
 
@@ -17,8 +18,8 @@ const LogInScreen = ({ navigation }) => {
 
   return (
     <SafeAreaView style={styles.container}>
-        <Text style = {styles.title}>Welocme to Trivia Puzzle</Text>
-        <EffectHook/>
+        {/* <Text style = {styles.title}>Welocme to Trivia Puzzle</Text> */}
+        {/* <EffectHook/> */}
         <KeyboardAvoidingView>
         <TextInput
         placeholder='Email'
@@ -37,6 +38,7 @@ const LogInScreen = ({ navigation }) => {
        >
         <Text style={styles.buttonText}>Register</Text>
       </TouchableOpacity>
+      <Counter/>
     </SafeAreaView>
   )
 }
